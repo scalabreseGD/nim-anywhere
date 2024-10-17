@@ -24,7 +24,7 @@ SLUG=$(echo ${SVC_NAME^^} | tr - _)
 NAME="${SVC_NAME}"
 
 # workspace configuration options
-MODEL=$(config_lkp "${SLUG}_MODEL" "meta/llama-3.1-70b-instruct")
+MODEL=$(config_lkp "${SLUG}_MODEL" "meta/llama-3.1-8b-instruct")
 TAG=$(config_lkp "${SLUG}_NIM_VERSION" "1")
 GPUS=$(config_lkp "${SLUG}_NIM_GPUS" "all")
 IMAGE="nvcr.io/nim/$MODEL"
