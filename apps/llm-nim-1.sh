@@ -37,7 +37,7 @@ _docker_run() {
         --gpus "$GPUS" \
         --ipc host \
         -e NGC_API_KEY \
-        -p 8001:8000 \
+        -p 8200:8000 \
         -v $(hostpath $NGC_HOME):/opt/nim/.cache \
         -u $(id -u) \
         --health-cmd="python -c \"import requests; resp = requests.get('http://localhost:8000/v1/health/ready'); resp.raise_for_status()\"" \
